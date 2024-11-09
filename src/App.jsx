@@ -13,3 +13,15 @@ function App() {
 }
 
 export default App
+
+//Components:
+  //AddToDo
+  //UpdateToDO
+  //DisplayToDo
+    //Newest at top
+//Utilities:
+  //Actions
+  //Reducer cases
+    //Add to do
+    //Update to do
+  
