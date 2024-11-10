@@ -1,13 +1,17 @@
 import { useState, useEffect, useReducer } from 'react'
-
+import toDosReducer from './utilities/toDosReducer.mjs'
+import ACTION from './utilities/toDosReducerActions.mjs'
 import './App.css'
+import AddToDo from './components/AddToDo'
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const [formData, setFormData] = useState('')
+  const [toDos, dispatch] = useReducer(toDosReducer,[])
   return (
     <>
-      
+      <h1>TO-DO LIST</h1>
+      <h3>What do you want to add to the list?</h3>
+      <AddToDo setFormData = {setFormData} formData = {formData} dispatch={dispatch}/>
     </>
   )
 }
