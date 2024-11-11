@@ -1,6 +1,7 @@
 const ACTION = {
     ADDTODO:'addToDo',
-    UPDATETODO: 'updateToDo'
+    UPDATETODO: 'updateToDo',
+    TOGGLECOMPLETE: 'toggleComplete'
 }
 
 export default ACTION
