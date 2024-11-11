@@ -5,15 +5,18 @@ export default function toDosReducer (toDos, action){
         case ACTION.ADDTODO:
             return [...toDos,
                 {
-                    id: toDos.length + 1,
-                    item: action.payload,
+                    id: action.payload.id,
+                    item: action.payload.item,
                     complete: false
                 }
             ]
         case ACTION.TOGGLECOMPLETE:
                 return toDos.map(toDo =>
                     toDo.id === action.payload ? { ...toDo, complete: !toDo.complete } : toDo
-                );    
+                );
+        case ACTION.DELETETODO:
+            return toDos.filter(toDo => toDo.id !== action.payload);
+
         case ACTION.UPDATETODO:
             return toDos
         default:

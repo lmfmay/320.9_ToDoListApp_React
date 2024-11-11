@@ -12,6 +12,8 @@ function DisplayToDo({toDos, dispatch}){
             <li key = {toDo.id}>
                 <input key = {toDo.id} type="checkbox" name="" id="" onClick={()=>dispatch({type: ACTION.TOGGLECOMPLETE, payload:toDo.id})}/> 
                 {toDo.item}
+                <button>Edit</button>
+                <button disabled = {!toDo.complete} onClick={()=>dispatch({type: ACTION.DELETETODO, payload:toDo.id})}>Delete</button>
             </li>
             )
         })}
