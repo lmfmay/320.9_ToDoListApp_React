@@ -1,6 +1,7 @@
 const ACTION = {
     ADDTODO:'addToDo',
-    UPDATETODO: 'updateToDo',
+    EDITTODO: 'editToDo',
+    SAVETODO: 'saveToDo',
     TOGGLECOMPLETE: 'toggleComplete',
     DELETETODO: 'deleteToDo'
 }
