@@ -25,9 +25,7 @@ export default function toDosReducer (toDos, action){
             );
         case ACTION.SAVETODO:
             return toDos.map(toDo =>
-                toDo.id === action.payload.id
-                    ? { ...toDo, item: action.payload.newItem, isEditing: false }
-                    : toDo
+                toDo.id === action.payload.id? { ...toDo, item: action.payload.newItem, isEditing: false } : toDo
             );
         default:
            return toDos

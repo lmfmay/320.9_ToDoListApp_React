@@ -15,7 +15,7 @@ function EditToDo ({toDoEdit,setToDoEdit, editText, setEditText, toDo, dispatch}
         ) : (toDo.item)}
 
         {toDoEdit === toDo.id ? (
-            <button onClick={() => {
+            <button id = "listBtnSave" className="listBtn" onClick={() => {
                 dispatch({ type: ACTION.SAVETODO, payload: { id: toDo.id, newItem: editText } });
                 setToDoEdit(null);
                 setEditText('');
@@ -23,7 +23,7 @@ function EditToDo ({toDoEdit,setToDoEdit, editText, setEditText, toDo, dispatch}
                 Save
             </button>
         ) : (
-            <button onClick={() => {
+            <button id="listBtnEdit" className="listBtn" onClick={() => {
                 setToDoEdit(toDo.id);
                 setEditText(toDo.item); // Set the current text for editing
             }}>

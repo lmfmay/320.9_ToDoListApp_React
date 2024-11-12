@@ -5,8 +5,8 @@ import AddToDo from './components/AddToDo'
 import DisplayToDo from './components/DisplayToDo'
 
 function App() {
-  const [formData, setFormData] = useState('')
-  const [toDos, dispatch] = useReducer(toDosReducer,[])
+  const [formData, setFormData] = useState('') //track input field before adding to to-do list
+  const [toDos, dispatch] = useReducer(toDosReducer,[]) //manage to-do list and actions
 
 
   return (
